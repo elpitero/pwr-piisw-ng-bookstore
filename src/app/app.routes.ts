@@ -3,6 +3,7 @@ import {BookListComponent} from "./books/components/book-list/book-list.componen
 import {bookListResolver} from "./books/resolvers/book-list.resolver";
 import {BookDetailsComponent} from "./books/components/book-details/book-details.component";
 import {bookDetailsResolver} from "./books/resolvers/book-details.resolver";
+import {BookEditComponent} from "./books/components/book-edit/book-edit.component";
 
 export const routes: Routes = [
   {
@@ -26,7 +27,7 @@ export const routes: Routes = [
   },
   {
     path: 'books/:bookId/edit',
-    component: BookDetailsComponent,
+    component: BookEditComponent,
     resolve: {
       book: bookDetailsResolver
     }

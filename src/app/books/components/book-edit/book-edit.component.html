@@ -1,0 +1,23 @@
+<div class="m-5">
+  <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <bs-form-field>
+      <label for="bookTitle" class="form-label">Title:</label>
+      <input type="text" formControlName="bookTitle" id="bookTitle" class="form-control" showError [controlName]="'Title'">
+    </bs-form-field>
+    <bs-form-field>
+      <label for="author" class="form-label">Author:</label>
+      <input type="text" formControlName="author" id="author" class="form-control" showError [controlName]="'Author'">
+    </bs-form-field>
+    <bs-form-field>
+      <label for="year" class="form-label">Year:</label>
+      <input type="number" formControlName="year" step="1" id="year" class="form-control" showError [controlName]="'Year'">
+    </bs-form-field>
+    <bs-form-field>
+      <label for="description" class="form-label">Description:</label>
+      <textarea formControlName="description" id="description" class="form-control" showError [controlName]="'Description'"></textarea>
+    </bs-form-field>
+    <button type="submit" [disabled]="isSubmitDisabled">Submit</button>
+    <button type="button" (click)="onCancel()">Cancel</button>
+  </form>
+</div>
+

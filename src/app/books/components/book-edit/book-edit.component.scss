@@ -1,0 +1,8 @@
+input.ng-invalid {
+  border: red 1px solid;
+}
+
+input.ng-invalid:focus{
+  box-shadow: none;
+}
+
