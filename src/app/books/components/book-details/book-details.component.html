@@ -7,8 +7,14 @@
         <h6 class="card-subtitle mb-2 text-muted">{{ book.author }}</h6>
         <h6 class="card-subtitle mb-2 text-muted">{{ book.year }}</h6>
         <p class="card-text">{{ book.description }}</p>
+        <a [routerLink]="['edit']" class="card-link">Edit</a>
+        <a [routerLink]="['reviews']" class="card-link">Reviews</a>
         <a [routerLink]="['/']" class="card-link">Back to List</a>
       </div>
     </div>
   </section>
+  <h2 class="mt-2">Reviews</h2>
+  <div *ngFor="let review of reviews">
+    <bs-book-review [review]="review"></bs-book-review>
+  </div>
 </article>
