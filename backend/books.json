@@ -50,6 +50,34 @@
       "title": "Don't like it",
       "description": "Anything is better than this.",
       "rate": 1
+    },
+    {
+      "id": 4,
+      "forBook": 1,
+      "title": "I liked it",
+      "description": "It is decent",
+      "rate": 4
+    },
+    {
+      "id": 5,
+      "forBook": 1,
+      "title": "Crazy crazy",
+      "description": "",
+      "rate": 3
+    },
+    {
+      "id": 6,
+      "forBook": 1,
+      "title": "Crazy 2",
+      "description": "",
+      "rate": 1
+    },
+    {
+      "id": 7,
+      "forBook": 3,
+      "title": "treeeee",
+      "description": "as",
+      "rate": 2
     }
   ]
 }

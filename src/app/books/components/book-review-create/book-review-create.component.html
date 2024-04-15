@@ -1,0 +1,19 @@
+<div class="m-5">
+  <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+    <bs-form-field>
+      <label for="reviewTitle" class="form-label">Title:</label>
+      <input type="text" formControlName="reviewTitle" id="reviewTitle" class="form-control" showError [controlName]="'Title'">
+    </bs-form-field>
+    <bs-form-field>
+      <label for="reviewRate" class="form-label">Rate:</label>
+      <input type="number" formControlName="reviewRate" step="1" id="reviewRate" class="form-control" showError [controlName]="'Rate'">
+    </bs-form-field>
+    <bs-form-field>
+      <label for="reviewDescription" class="form-label">Description:</label>
+      <textarea formControlName="reviewDescription" id="reviewDescription" class="form-control" showError [controlName]="'Description'"></textarea>
+    </bs-form-field>
+    <button type="submit" [disabled]="isSubmitDisabled">Submit</button>
+    <button type="button" (click)="onCancel()">Cancel</button>
+  </form>
+</div>
+

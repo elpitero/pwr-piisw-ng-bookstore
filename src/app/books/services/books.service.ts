@@ -37,4 +37,12 @@ export class BooksService {
   getAllReviews(): Observable<Review[]> {
     return this.http.get<Review[]>(reviewsApiPrefix)
   }
+
+  async getNewReviewId(): Promise<number> {
+    let newReviewId: number = 0;
+    await this.getAllReviews().forEach((reviews) => {
+      newReviewId = reviews.length + 1
+    });
+    return newReviewId;
+  }
 }

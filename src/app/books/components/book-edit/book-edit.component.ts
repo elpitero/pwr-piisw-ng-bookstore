@@ -49,8 +49,6 @@ export class BookEditComponent {
         description: formValue.description
       };
 
-      console.log(updatedBook);
-
       this.bookService.saveBook(updatedBook).subscribe({
         next: () => {
           this.router.navigate(['/books']).then(() => {})
