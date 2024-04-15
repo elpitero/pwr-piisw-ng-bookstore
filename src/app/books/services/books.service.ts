@@ -14,8 +14,8 @@ export class BooksService {
 
   constructor(private readonly http: HttpClient) { }
 
-  getAllBooks(): Observable<Book[]> {
-    return this.http.get<Book[]>(booksApiPrefix);
+  getAllBooks(content: any = ""): Observable<Book[]> {
+    return this.http.get<Book[]>(`${booksApiPrefix}?q=${content}`);
   }
 
   findBookById(id: string | null): Observable<Book> {

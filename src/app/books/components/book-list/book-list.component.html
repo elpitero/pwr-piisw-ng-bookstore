@@ -1,4 +1,7 @@
 <article class="m-3">
+  <form [formGroup]="searchForm">
+    <input type="text" formControlName="searchQuery" placeholder="Search books...">
+  </form>
   <h2>List of all books</h2>
   <section class="d-flex flex-column gap-2">
     @for (book of books; track book.id) {
